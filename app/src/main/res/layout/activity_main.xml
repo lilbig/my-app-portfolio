@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:style="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#90b4f5ff"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/HeaderStyle"
+        android:id="@+id/header"
+        android:text="@string/header_message" />
+
+    <ScrollView
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                style="@style/ButtonStyle"
+                android:id="@+id/spotify"
+                android:text="@string/sportify"
+                android:onClick="launchApp" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:id="@+id/scores"
+                android:layout_below="@id/spotify"
+                android:text="@string/scores"
+                android:onClick="launchApp" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:id="@+id/library"
+                android:layout_below="@id/scores"
+                android:text="@string/library"
+                android:onClick="launchApp" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:id="@+id/build"
+                android:layout_below="@id/library"
+                android:text="@string/build"
+                android:onClick="launchApp" />
+
+            <Button
+                style="@style/ButtonStyle"
+                android:id="@+id/reader"
+                android:layout_below="@id/build"
+                android:text="@string/reader"
+                android:onClick="launchApp" />
+
+            <Button
+                style="@style/ButtonStyle.Capstone"
+                android:id="@+id/capstone"
+                android:layout_below="@id/reader"
+                android:text="@string/capstone"
+                android:onClick="launchApp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
